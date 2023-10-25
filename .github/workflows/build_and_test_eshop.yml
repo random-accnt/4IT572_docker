@@ -1,4 +1,4 @@
-name: Build and test eshop workflow
+name: Build and test eshop
 on:
   push:
     branches:
