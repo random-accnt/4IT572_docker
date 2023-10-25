@@ -44,5 +44,6 @@ jobs:
           key: node_modules-${{hashFiles('**/package-lock.json')}}
       - name: Build
         run: |
+          npx browserslist@latest --update-db
           npm rebuild node-sass --force
           npm run build -- --colors
