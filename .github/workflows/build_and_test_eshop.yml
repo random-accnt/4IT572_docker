@@ -15,7 +15,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4.0.0
         with:
-          node-version: 10
+          node-version: 14
       - name: Cache node modules
         uses: actions/cache@v3.3.2
         with:
@@ -36,7 +36,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4.0.0
         with:
-          node-version: 10
+          node-version: 14
       - name: Cache node modules
         uses: actions/cache@v3.3.2
         with:
@@ -44,6 +44,5 @@ jobs:
           key: node_modules-${{hashFiles('**/package-lock.json')}}
       - name: Build
         run: |
-          npx browserslist@latest --update-db
           npm rebuild node-sass --force
           npm run build -- --colors
